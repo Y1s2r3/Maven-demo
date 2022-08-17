@@ -17,6 +17,7 @@ pipeline {
 					image 'adoptopenjdk/openjdk8:latest'
 					args '-v $HOME/.m2:/tmp/jenkins-home/.m2'
 				}
+				}
 			}
 			options { timeout(time: 30, unit: 'MINUTES') }
 			steps {
