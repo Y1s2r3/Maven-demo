@@ -3,7 +3,7 @@
   git branch: 'main', url: 'https://github.com/Y1s2r3/Maven-demo.git'
   }
   stage('Build') {
-    bat "cd initial && mvn clean package"
+    bat "cd initial && mvn -Dmaven.test.failure.ignore=true clean package"
   }
   stage ('analysis') {
    bat "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar \
